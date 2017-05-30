@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             map = new ArrayList<ArrayList<Ball>>();
             for(int i = 0; i < n; i ++) {
                 map.add(i, new ArrayList<Ball>());
-                for(int j = 0; j < n; j ++)
                 for (int j = 0; j < n; j++)
                     map.get(i).add(new Ball(0));
             }
