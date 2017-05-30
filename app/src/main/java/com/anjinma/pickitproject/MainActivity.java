@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
             ballType = n;
         }
     }
-    class Ball_Array{
+    class Ball_Array implements  Cloneable{
         ArrayList<ArrayList<Ball>> map;
         int sizeOfArray;
         Ball_Array(){
@@ -28,11 +28,12 @@ public class MainActivity extends AppCompatActivity {
         }
         Ball_Array(int n){
             map = new ArrayList<ArrayList<Ball>>();
-            for(int i = 0; i < n; i ++)
+            for(int i = 0; i < n; i ++) {
                 map.add(i, new ArrayList<Ball>());
-            for(int i = 0; i < n; i ++)
                 for(int j = 0; j < n; j ++)
+                for (int j = 0; j < n; j++)
                     map.get(i).add(new Ball(0));
+            }
             sizeOfArray = n;
         }
         Ball_Array(int n, int[][] sample){
@@ -49,6 +50,17 @@ public class MainActivity extends AppCompatActivity {
             map = copy.map;
             sizeOfArray = copy.sizeOfArray;
         }
+        protected Ball_Array clone(){
+            Ball_Array temp = new Ball_Array(sizeOfArray);
+            Ball tempBall;
+            for(int i = 0; i < sizeOfArray; i++){
+                for(int j = 0; j < sizeOfArray; j++) {
+                    tempBall = new Ball(map.get(i).get(j).ballType);
+                    temp.map.get(i).set(j, tempBall);
+                }
+            }
+            return temp;
+        }
         void randomMap(){
             for(int i = 0; i < sizeOfArray; i++){
                 for(int j = 0; j < sizeOfArray; j++){
@@ -58,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
         boolean matching(Ball_Array target, int x, int y){
             int count = 0;
+            map.size();
             if (sizeOfArray < target.sizeOfArray)
                 return false;
             else {
@@ -115,267 +128,234 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     int count = 0;
     int max;
     int i=0, j=0, k=0;
+    int x = 0, y = 0;
 
     Ball_Queue myQueue = new Ball_Queue();
     Ball_Array myMap = new Ball_Array(4);            //맵 구성
     Ball_Array emptyArray = new Ball_Array(4);
-    Ball_Array saveMap;
+    Ball_Array saveMap = new Ball_Array(4);
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button start = (Button)findViewById(R.id.start);
+        final Button start = (Button) findViewById(R.id.start);
 
         final ArrayList<ArrayList<Button>> buttonMap = new ArrayList<ArrayList<Button>>();
         final ArrayList<ArrayList<ArrayList<Button>>> queueMap = new ArrayList<ArrayList<ArrayList<Button>>>();
         final ArrayList<ArrayList<Button>> dontseeButton = new ArrayList<ArrayList<Button>>();
 
         buttonMap.add(new ArrayList<Button>());
-        buttonMap.get(0).add((Button)findViewById(R.id.button1));
-        buttonMap.get(0).add((Button)findViewById(R.id.button2));
-        buttonMap.get(0).add((Button)findViewById(R.id.button3));
-        buttonMap.get(0).add((Button)findViewById(R.id.button4));
+        buttonMap.get(0).add((Button) findViewById(R.id.button1));
+        buttonMap.get(0).add((Button) findViewById(R.id.button2));
+        buttonMap.get(0).add((Button) findViewById(R.id.button3));
+        buttonMap.get(0).add((Button) findViewById(R.id.button4));
         buttonMap.add(new ArrayList<Button>());
-        buttonMap.get(1).add((Button)findViewById(R.id.button5));
-        buttonMap.get(1).add((Button)findViewById(R.id.button6));
-        buttonMap.get(1).add((Button)findViewById(R.id.button7));
-        buttonMap.get(1).add((Button)findViewById(R.id.button8));
+        buttonMap.get(1).add((Button) findViewById(R.id.button5));
+        buttonMap.get(1).add((Button) findViewById(R.id.button6));
+        buttonMap.get(1).add((Button) findViewById(R.id.button7));
+        buttonMap.get(1).add((Button) findViewById(R.id.button8));
         buttonMap.add(new ArrayList<Button>());
-        buttonMap.get(2).add((Button)findViewById(R.id.button9));
-        buttonMap.get(2).add((Button)findViewById(R.id.button10));
-        buttonMap.get(2).add((Button)findViewById(R.id.button11));
-        buttonMap.get(2).add((Button)findViewById(R.id.button12));
+        buttonMap.get(2).add((Button) findViewById(R.id.button9));
+        buttonMap.get(2).add((Button) findViewById(R.id.button10));
+        buttonMap.get(2).add((Button) findViewById(R.id.button11));
+        buttonMap.get(2).add((Button) findViewById(R.id.button12));
         buttonMap.add(new ArrayList<Button>());
-        buttonMap.get(3).add((Button)findViewById(R.id.button13));
-        buttonMap.get(3).add((Button)findViewById(R.id.button14));
-        buttonMap.get(3).add((Button)findViewById(R.id.button15));
-        buttonMap.get(3).add((Button)findViewById(R.id.button16));
+        buttonMap.get(3).add((Button) findViewById(R.id.button13));
+        buttonMap.get(3).add((Button) findViewById(R.id.button14));
+        buttonMap.get(3).add((Button) findViewById(R.id.button15));
+        buttonMap.get(3).add((Button) findViewById(R.id.button16));
 
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(0).add(new ArrayList<Button>());
         queueMap.get(0).add(new ArrayList<Button>());
-        queueMap.get(0).get(0).add((Button)findViewById(R.id.QueueButton1_1));
-        queueMap.get(0).get(0).add((Button)findViewById(R.id.QueueButton1_2));
-        queueMap.get(0).get(1).add((Button)findViewById(R.id.QueueButton1_3));
-        queueMap.get(0).get(1).add((Button)findViewById(R.id.QueueButton1_4));
+        queueMap.get(0).get(0).add((Button) findViewById(R.id.QueueButton1_1));
+        queueMap.get(0).get(0).add((Button) findViewById(R.id.QueueButton1_2));
+        queueMap.get(0).get(1).add((Button) findViewById(R.id.QueueButton1_3));
+        queueMap.get(0).get(1).add((Button) findViewById(R.id.QueueButton1_4));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(1).add(new ArrayList<Button>());
         queueMap.get(1).add(new ArrayList<Button>());
-        queueMap.get(1).get(0).add((Button)findViewById(R.id.QueueButton1_5));
-        queueMap.get(1).get(0).add((Button)findViewById(R.id.QueueButton1_6));
-        queueMap.get(1).get(1).add((Button)findViewById(R.id.QueueButton1_7));
-        queueMap.get(1).get(1).add((Button)findViewById(R.id.QueueButton1_8));
+        queueMap.get(1).get(0).add((Button) findViewById(R.id.QueueButton1_5));
+        queueMap.get(1).get(0).add((Button) findViewById(R.id.QueueButton1_6));
+        queueMap.get(1).get(1).add((Button) findViewById(R.id.QueueButton1_7));
+        queueMap.get(1).get(1).add((Button) findViewById(R.id.QueueButton1_8));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(2).add(new ArrayList<Button>());
         queueMap.get(2).add(new ArrayList<Button>());
-        queueMap.get(2).get(0).add((Button)findViewById(R.id.QueueButton1_9));
-        queueMap.get(2).get(0).add((Button)findViewById(R.id.QueueButton1_10));
-        queueMap.get(2).get(1).add((Button)findViewById(R.id.QueueButton1_11));
-        queueMap.get(2).get(1).add((Button)findViewById(R.id.QueueButton1_12));
+        queueMap.get(2).get(0).add((Button) findViewById(R.id.QueueButton1_9));
+        queueMap.get(2).get(0).add((Button) findViewById(R.id.QueueButton1_10));
+        queueMap.get(2).get(1).add((Button) findViewById(R.id.QueueButton1_11));
+        queueMap.get(2).get(1).add((Button) findViewById(R.id.QueueButton1_12));
 
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(3).add(new ArrayList<Button>());
         queueMap.get(3).add(new ArrayList<Button>());
-        queueMap.get(3).get(0).add((Button)findViewById(R.id.QueueButton2_1));
-        queueMap.get(3).get(0).add((Button)findViewById(R.id.QueueButton2_2));
-        queueMap.get(3).get(1).add((Button)findViewById(R.id.QueueButton2_3));
-        queueMap.get(3).get(1).add((Button)findViewById(R.id.QueueButton2_4));
+        queueMap.get(3).get(0).add((Button) findViewById(R.id.QueueButton2_1));
+        queueMap.get(3).get(0).add((Button) findViewById(R.id.QueueButton2_2));
+        queueMap.get(3).get(1).add((Button) findViewById(R.id.QueueButton2_3));
+        queueMap.get(3).get(1).add((Button) findViewById(R.id.QueueButton2_4));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(4).add(new ArrayList<Button>());
         queueMap.get(4).add(new ArrayList<Button>());
-        queueMap.get(4).get(0).add((Button)findViewById(R.id.QueueButton2_5));
-        queueMap.get(4).get(0).add((Button)findViewById(R.id.QueueButton2_6));
-        queueMap.get(4).get(1).add((Button)findViewById(R.id.QueueButton2_7));
-        queueMap.get(4).get(1).add((Button)findViewById(R.id.QueueButton2_8));
+        queueMap.get(4).get(0).add((Button) findViewById(R.id.QueueButton2_5));
+        queueMap.get(4).get(0).add((Button) findViewById(R.id.QueueButton2_6));
+        queueMap.get(4).get(1).add((Button) findViewById(R.id.QueueButton2_7));
+        queueMap.get(4).get(1).add((Button) findViewById(R.id.QueueButton2_8));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(5).add(new ArrayList<Button>());
         queueMap.get(5).add(new ArrayList<Button>());
-        queueMap.get(5).get(0).add((Button)findViewById(R.id.QueueButton2_9));
-        queueMap.get(5).get(0).add((Button)findViewById(R.id.QueueButton2_10));
-        queueMap.get(5).get(1).add((Button)findViewById(R.id.QueueButton2_11));
-        queueMap.get(5).get(1).add((Button)findViewById(R.id.QueueButton2_12));
+        queueMap.get(5).get(0).add((Button) findViewById(R.id.QueueButton2_9));
+        queueMap.get(5).get(0).add((Button) findViewById(R.id.QueueButton2_10));
+        queueMap.get(5).get(1).add((Button) findViewById(R.id.QueueButton2_11));
+        queueMap.get(5).get(1).add((Button) findViewById(R.id.QueueButton2_12));
 
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(6).add(new ArrayList<Button>());
         queueMap.get(6).add(new ArrayList<Button>());
-        queueMap.get(6).get(0).add((Button)findViewById(R.id.QueueButton3_1));
-        queueMap.get(6).get(0).add((Button)findViewById(R.id.QueueButton3_2));
-        queueMap.get(6).get(1).add((Button)findViewById(R.id.QueueButton3_3));
-        queueMap.get(6).get(1).add((Button)findViewById(R.id.QueueButton3_4));
+        queueMap.get(6).get(0).add((Button) findViewById(R.id.QueueButton3_1));
+        queueMap.get(6).get(0).add((Button) findViewById(R.id.QueueButton3_2));
+        queueMap.get(6).get(1).add((Button) findViewById(R.id.QueueButton3_3));
+        queueMap.get(6).get(1).add((Button) findViewById(R.id.QueueButton3_4));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(7).add(new ArrayList<Button>());
         queueMap.get(7).add(new ArrayList<Button>());
-        queueMap.get(7).get(0).add((Button)findViewById(R.id.QueueButton3_5));
-        queueMap.get(7).get(0).add((Button)findViewById(R.id.QueueButton3_6));
-        queueMap.get(7).get(1).add((Button)findViewById(R.id.QueueButton3_7));
-        queueMap.get(7).get(1).add((Button)findViewById(R.id.QueueButton3_8));
+        queueMap.get(7).get(0).add((Button) findViewById(R.id.QueueButton3_5));
+        queueMap.get(7).get(0).add((Button) findViewById(R.id.QueueButton3_6));
+        queueMap.get(7).get(1).add((Button) findViewById(R.id.QueueButton3_7));
+        queueMap.get(7).get(1).add((Button) findViewById(R.id.QueueButton3_8));
         queueMap.add(new ArrayList<ArrayList<Button>>());
         queueMap.get(8).add(new ArrayList<Button>());
         queueMap.get(8).add(new ArrayList<Button>());
-        queueMap.get(8).get(0).add((Button)findViewById(R.id.QueueButton3_9));
-        queueMap.get(8).get(0).add((Button)findViewById(R.id.QueueButton3_10));
-        queueMap.get(8).get(1).add((Button)findViewById(R.id.QueueButton3_11));
-        queueMap.get(8).get(1).add((Button)findViewById(R.id.QueueButton3_12));
+        queueMap.get(8).get(0).add((Button) findViewById(R.id.QueueButton3_9));
+        queueMap.get(8).get(0).add((Button) findViewById(R.id.QueueButton3_10));
+        queueMap.get(8).get(1).add((Button) findViewById(R.id.QueueButton3_11));
+        queueMap.get(8).get(1).add((Button) findViewById(R.id.QueueButton3_12));
 
         dontseeButton.add(new ArrayList<Button>());
-        dontseeButton.get(0).add((Button)findViewById(R.id.dontSeeButton1));
-        dontseeButton.get(0).add((Button)findViewById(R.id.dontSeeButton2));
-        dontseeButton.get(0).add((Button)findViewById(R.id.dontSeeButton3));
+        dontseeButton.get(0).add((Button) findViewById(R.id.dontSeeButton1));
+        dontseeButton.get(0).add((Button) findViewById(R.id.dontSeeButton2));
+        dontseeButton.get(0).add((Button) findViewById(R.id.dontSeeButton3));
         dontseeButton.add(new ArrayList<Button>());
-        dontseeButton.get(1).add((Button)findViewById(R.id.dontSeeButton4));
-        dontseeButton.get(1).add((Button)findViewById(R.id.dontSeeButton5));
-        dontseeButton.get(1).add((Button)findViewById(R.id.dontSeeButton6));
+        dontseeButton.get(1).add((Button) findViewById(R.id.dontSeeButton4));
+        dontseeButton.get(1).add((Button) findViewById(R.id.dontSeeButton5));
+        dontseeButton.get(1).add((Button) findViewById(R.id.dontSeeButton6));
         dontseeButton.add(new ArrayList<Button>());
-        dontseeButton.get(2).add((Button)findViewById(R.id.dontSeeButton7));
-        dontseeButton.get(2).add((Button)findViewById(R.id.dontSeeButton8));
-        dontseeButton.get(2).add((Button)findViewById(R.id.dontSeeButton9));
+        dontseeButton.get(2).add((Button) findViewById(R.id.dontSeeButton7));
+        dontseeButton.get(2).add((Button) findViewById(R.id.dontSeeButton8));
+        dontseeButton.get(2).add((Button) findViewById(R.id.dontSeeButton9));
 
 
-
-
-
-        for(int i = 0; i < 4; i ++){
-            for(int j = 0; j < 4; j ++){
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
                 buttonMap.get(i).get(j).setAlpha(0);
             }
         }
-        for(int i = 0; i < 9; i ++){
-            for(int j = 0; j < 2; j ++){
-                for(int k = 0; k < 2; k ++) {
-                   queueMap.get(i).get(j).get(k).setAlpha(0);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    queueMap.get(i).get(j).get(k).setAlpha(0);
                 }
             }
         }
-        for(int i = 0; i < 3; i ++){
-            for(int j = 0; j < 3; j ++){
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 dontseeButton.get(i).get(j).setAlpha(0);
             }
         }
-        i = 0; j = 0;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                    for (int j = 0; j < 2; j++) {
-                        for (int k = 0; k < 2; k++) {
-                            queueMap.get(count).get(j).get(k).setAlpha(0);
-                        }
-                    }
-                    count++;
-            }
-        });
-        i = 0; j = 1;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 0; j = 2;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 1; j = 0;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 1; j = 1;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 1; j = 2;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 2; j = 0;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 2; j = 1;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
-        i = 2; j = 2;
-        dontseeButton.get(i).get(j).setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                for (int j = 0; j < 2; j++) {
-                    for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
-                    }
-                }
-                count++;
-            }
-        });
 
-
-
-
-
+        dontseeButton.get(0).get(0).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 0;
+                y = 0;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(0).get(1).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 0;
+                y = 1;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(0).get(2).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 0;
+                y = 2;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(1).get(0).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 1;
+                y = 0;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(1).get(1).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 1;
+                y = 1;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(1).get(2).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 1;
+                y = 2;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(2).get(0).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 2;
+                y = 0;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(2).get(1).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 2;
+                y = 1;
+                setMap(queueMap, buttonMap);
+            }
+        });
+        dontseeButton.get(2).get(2).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                x = 2;
+                y = 2;
+                setMap(queueMap, buttonMap);
+            }
+        });
 
         start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                myMap.randomMap();
-                for(int i = 0; i < 4; i ++){
-                    for(int j = 0; j < 4; j ++){
+
+                while(true) {
+                    myMap.randomMap();
+                    saveMap = myMap.clone();
+                    while (!saveMap.matching(emptyArray, 0, 0)) {
+                        myQueue.currentQueue.add(saveMap.generateQueue(2));
+                    }
+                    if(myQueue.currentQueue.size() == 9)
+                        break;
+                    else
+                        myQueue.currentQueue = new ArrayList<Ball_Array>();
+                }
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 4; j++) {
                         buttonMap.get(i).get(j).setText(myMap.map.get(i).get(j).ballType + "");
                         buttonMap.get(i).get(j).setAlpha(1);
                     }
                 }
 
-                saveMap = new Ball_Array(myMap);
-                while(!saveMap.matching(emptyArray, 0, 0)) {
-                    myQueue.currentQueue.add(myMap.generateQueue(2));
-                }
-
-                for(int i = 0; i < 9; i ++) {
+                for (int i = 0; i < 9; i++) {
                     for (int j = 0; j < 2; j++) {
                         for (int k = 0; k < 2; k++) {
                             queueMap.get(i).get(j).get(k).setText(myQueue.currentQueue.get(i).map.get(j).get(k).ballType + "");
@@ -385,10 +365,27 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
-
             }
         });
     }
+
+
+
+        public void setMap(ArrayList<ArrayList<ArrayList<Button>>> queueMap, ArrayList<ArrayList<Button>> buttonMap) {
+            if(myMap.matching(myQueue.currentQueue.get(count),x,y)) {
+                for (int j = 0; j < 2; j++) {
+                    for (int k = 0; k < 2; k++) {
+                        queueMap.get(count).get(j).get(k).setAlpha(0);
+                    }
+                }
+                count++;
+                myMap.subArray(2, x, y);
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 4; j++) {
+                        buttonMap.get(i).get(j).setText(myMap.map.get(i).get(j).ballType + "");
+                    }
+                }
+            }
+        }
 
 }
