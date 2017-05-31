@@ -1,5 +1,6 @@
 package com.anjinma.pickitproject;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -119,18 +120,11 @@ public class MainActivity extends AppCompatActivity {
         Ball_Queue (){
             currentQueue = new ArrayList<Ball_Array>();
         }
-        void printQueue(Button [] queueButton, int n) {
-            queueButton[0].setText(currentQueue.get(n).map.get(0).get(0).ballType);
-            queueButton[1].setText(currentQueue.get(n).map.get(0).get(1).ballType);
-            queueButton[2].setText(currentQueue.get(n).map.get(1).get(0).ballType);
-            queueButton[3].setText(currentQueue.get(n).map.get(1).get(1).ballType);
-        }
     }
 
 
+    int currentQueueCount = 0;
     int count = 0;
-    int max;
-    int i=0, j=0, k=0;
     int x = 0, y = 0;
 
     Ball_Queue myQueue = new Ball_Queue();
@@ -144,7 +138,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button start = (Button) findViewById(R.id.start);
 
         final ArrayList<ArrayList<Button>> buttonMap = new ArrayList<ArrayList<Button>>();
         final ArrayList<ArrayList<ArrayList<Button>>> queueMap = new ArrayList<ArrayList<ArrayList<Button>>>();
@@ -333,57 +326,81 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        start.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
 
-                while(true) {
-                    myMap.randomMap();
-                    saveMap = myMap.clone();
-                    while (!saveMap.matching(emptyArray, 0, 0)) {
-                        myQueue.currentQueue.add(saveMap.generateQueue(2));
-                    }
-                    if(myQueue.currentQueue.size() == 9)
-                        break;
-                    else
-                        myQueue.currentQueue = new ArrayList<Ball_Array>();
-                }
-                for (int i = 0; i < 4; i++) {
-                    for (int j = 0; j < 4; j++) {
-                        buttonMap.get(i).get(j).setText(myMap.map.get(i).get(j).ballType + "");
-                        buttonMap.get(i).get(j).setAlpha(1);
-                    }
+        //createMap()
+            while (true) {
+                myMap.randomMap();
+                saveMap = myMap.clone();
+                while (!saveMap.matching(emptyArray, 0, 0)) {
+                    myQueue.currentQueue.add(saveMap.generateQueue(2));
                 }
 
-                for (int i = 0; i < 9; i++) {
-                    for (int j = 0; j < 2; j++) {
-                        for (int k = 0; k < 2; k++) {
-                            queueMap.get(i).get(j).get(k).setText(myQueue.currentQueue.get(i).map.get(j).get(k).ballType + "");
-                            queueMap.get(i).get(j).get(k).setAlpha(1);
-                        }
-                    }
-                }
-
+                if (myQueue.currentQueue.size() >= 9)
+                    break;
+                else
+                    myQueue.currentQueue = new ArrayList<Ball_Array>();
 
             }
-        });
-    }
+            for (int i = 0; i < 4; i++) {
+                for (int j = 0; j < 4; j++) {
+                    buttonMap.get(i).get(j).setText(myMap.map.get(i).get(j).ballType + "");
+                    buttonMap.get(i).get(j).setAlpha(1);
+                }
+            }
+
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 2; j++) {
+                    for (int k = 0; k < 2; k++) {
+                        queueMap.get(i).get(j).get(k).setText(myQueue.currentQueue.get(i).map.get(j).get(k).ballType + "");
+                        queueMap.get(i).get(j).get(k).setAlpha(1);
+                    }
+                }
+            }
+        }
+
 
 
 
         public void setMap(ArrayList<ArrayList<ArrayList<Button>>> queueMap, ArrayList<ArrayList<Button>> buttonMap) {
-            if(myMap.matching(myQueue.currentQueue.get(count),x,y)) {
+            if(myMap.matching(myQueue.currentQueue.get(currentQueueCount),x,y)) {
                 for (int j = 0; j < 2; j++) {
                     for (int k = 0; k < 2; k++) {
-                        queueMap.get(count).get(j).get(k).setAlpha(0);
+                        queueMap.get(count%3).get(j).get(k).setAlpha(0);
                     }
                 }
                 count++;
+                currentQueueCount++;
                 myMap.subArray(2, x, y);
                 for (int i = 0; i < 4; i++) {
                     for (int j = 0; j < 4; j++) {
                         buttonMap.get(i).get(j).setText(myMap.map.get(i).get(j).ballType + "");
                     }
                 }
+
+                if(count % 3 == 0){
+                    for (int i = 0; i < 9; i++) {
+                        if(i + count >= myQueue.currentQueue.size()) {
+                            for (int j = 0; j < 2; j++) {
+                                for (int k = 0; k < 2; k++) {
+                                    queueMap.get(i).get(j).get(k).setAlpha(0);
+                                }
+                            }
+                            continue;
+                        }
+                        for (int j = 0; j < 2; j++) {
+                            for (int k = 0; k < 2; k++) {
+                                queueMap.get(i).get(j).get(k).setText(myQueue.currentQueue.get(i+count).map.get(j).get(k).ballType + "");
+                                queueMap.get(i).get(j).get(k).setAlpha(1);
+                            }
+                        }
+                    }
+                }
+                if(currentQueueCount == myQueue.currentQueue.size()){
+                    finish();
+                    Intent intent_1 = new Intent(this, StartActivity.class);
+                    startActivity(intent_1);
+                }
+
             }
         }
 
