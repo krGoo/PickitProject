@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.cookandroid.pickit.ScrollActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="288dp">
+
+
+        <Button
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UnDo" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-90dp"
+            android:layout_marginTop="-90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="-90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="-90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-90dp"
+            android:layout_marginTop="-30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="-30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="-30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-90dp"
+            android:layout_marginTop="30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="30dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-90dp"
+            android:layout_marginTop="90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-30dp"
+            android:layout_marginTop="90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="-60dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="-60dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="-60dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="0dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="0dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="-60dp"
+            android:layout_marginTop="60dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="60dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/dontSeeButton9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:text="2" />
+
+
+    </FrameLayout>
+
+    <HorizontalScrollView
+        android:layout_width="850dp"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:layout_width="1500dp"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/queue1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_column="0"
+                        android:layout_marginStart="19dp"
+                        android:layout_row="0"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="104dp">
+
+                        <GridLayout
+                            android:id="@+id/ball_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball1_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball1_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball1_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball1_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue1"
+                        android:layout_column="1"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue1"
+                        android:layout_toRightOf="@+id/queue1"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball3_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball3_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball3_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball3_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue5"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball5_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball5_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball5_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball5_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue7"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball7_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball7_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball7_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball7_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue9"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball9_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball9_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball9_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball9_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue11"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball11_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball11_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball11_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball11_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue13"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball13_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball13_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball13_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball13_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue15"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball15_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball15_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball15_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball15_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue17"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball17_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball17_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball17_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball17_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue19"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_19"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball19_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball19_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball19_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball19_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:id="@+id/queue2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_column="0"
+                        android:layout_marginStart="19dp"
+                        android:layout_row="0"
+                        android:visibility="visible"
+                        tools:layout_editor_absoluteX="0dp"
+                        tools:layout_editor_absoluteY="104dp">
+
+                        <GridLayout
+                            android:id="@+id/ball_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball2_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball2_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball2_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball2_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue4"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue1"
+                        android:layout_column="1"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue1"
+                        android:layout_toRightOf="@+id/queue1"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball4_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball4_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball4_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball4_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue6"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball6_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball6_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball6_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball6_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue8"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball8_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball8_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball8_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball8_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue10"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball10_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball10_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball10_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball10_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue12"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball12_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball12_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball12_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball12_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue14"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball14_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball14_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball14_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball14_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue16"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball16_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball16_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball16_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball16_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue18"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball18_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball18_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball18_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball18_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/queue20"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignTop="@+id/queue4"
+                        android:layout_column="2"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_row="0"
+                        android:layout_toEndOf="@+id/queue4"
+                        android:layout_toRightOf="@+id/queue4"
+                        android:visibility="visible">
+
+                        <GridLayout
+                            android:id="@+id/ball_20"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/ball20_00"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/button32"
+                                android:layout_alignRight="@+id/button32"
+                                android:layout_below="@+id/button29"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball20_01"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/ball4_00"
+                                android:layout_toRightOf="@+id/ball4_00"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball20_10"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/ball4_00"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:text="0" />
+
+                            <Button
+                                android:id="@+id/ball20_11"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/ball4_01"
+                                android:layout_column="1"
+                                android:layout_row="1"
+                                android:layout_toEndOf="@+id/ball4_10"
+                                android:layout_toRightOf="@+id/ball4_10"
+                                android:text="0" />
+                        </GridLayout>
+                    </FrameLayout>
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
